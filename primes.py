@@ -1,14 +1,27 @@
-# hi
+import numpy as np
 
-# this program will generate a list of complex factors of primes
-# the factors will be of the form (a+bi)(a-bi)
-# where a and b belong to L, i is the square root of -1
-# and L is a list that contains squares and "surd squares"
+# setting the range
+r = 10
 
-# important definitions
+# defining the square
+square = [x*x for x in range(r)]
 
-# a square is not a circle
-# a surd is the square root of a prime
-# a surd square is the square of a integer multiple of a surd
+# defining primes
+p = []
 
+for x in range(r):
+    if x>1:
+        for i in range(2, x):
+            if (x % i) ==0:
+                break
+        else:
+            p.append(x)
 
+# defining surd squares
+surd_square = []
+
+for prime in p:
+    for x in range(1,r):
+        surd_square.append(prime*x*x)
+
+L = [square, surd_square]
