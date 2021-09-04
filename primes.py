@@ -24,4 +24,4 @@ for prime in p:
     for x in range(1,r):
         surd_square.append(prime*x*x)
 
-L = [square + surd_square]
+L = square + surd_square
