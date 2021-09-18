@@ -26,3 +26,13 @@ for prime in p:
 
 # combining the squares and surd squares
 L = square + surd_square
+
+complex_factors = []
+
+for prime in p:
+    for number in range (len(L)-1):
+        for value in range (number, len(L)):
+            if L[number] + L[value] == prime:
+              complex_factors.append((prime, L[number], L[value]))  
+
+print(complex_factors)
