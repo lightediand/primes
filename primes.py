@@ -32,8 +32,8 @@ sum_of_square = []
 
 for prime in p:
     for number in range (len(L)-1):
-        for value in range (number, len(L)):
-            if L[number] + L[value] == prime:
-                sum_of_square.append((prime, L[number], L[value]))  
+        for other_number in range (number, len(L)):
+            if L[number] + L[other_number] == prime:
+                sum_of_square.append((prime, L[number], L[other_number]))  
 
 print(sum_of_square)
