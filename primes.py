@@ -24,16 +24,13 @@ for prime in p:
     for x in range(1,n):
         surd_square.append(prime*x*x)
 
-# combining the squares and surd squares
+# combining the squares and surd squares into one list
 L = square + surd_square
 
-# finding the sum of squares equal to the prime
-sum_of_square = []
-
+# writing the primes as the sum of squares and surd squares 
 for prime in p:
     for number in range (len(L)-1):
         for other_number in range (number, len(L)):
             if L[number] + L[other_number] == prime:
-                sum_of_square.append((prime, L[number], L[other_number]))  
+                print("{} = {} + {}".format(prime, L[number], L[other_number]))
 
-print(sum_of_square)
