@@ -1,1 +1,11 @@
-A program that determines the complex factors of prime numbers under a given number n ∈ ℕ, where the factors lie in an extension of the ring ℤ.
+This is a program that writes prime numbers under a given number n ∈ ℕ as the sum of two squares.
+
+The program generates a list of p = a + b for each prime and creates a text file. Some primes may have more than one sum. 
+
+The values for a and b are either:
+1) a square, s = { n² | n ∈ ℕ }
+2) a surd square, which is the square of a multiple of a surd, that is, 
+   
+   ss = { (n√p)² | n ∈ ℕ, p ∈ ℙ }, or equivalently, 
+   
+   ss = { n²p | n ∈ ℕ, p ∈ ℙ }.
