@@ -1,5 +1,3 @@
-import numpy as np
-
 # setting the range
 n = 10
 
@@ -28,9 +26,13 @@ for prime in p:
 L = square + surd_square
 
 # writing the primes as the sum of squares and surd squares 
+
+f = open("primes.txt","w") 
+
 for prime in p:
     for number in range (len(L)-1):
         for other_number in range (number, len(L)):
             if L[number] + L[other_number] == prime:
-                print("{} = {} + {}".format(prime, L[number], L[other_number]))
+                f.write("{} = {} + {} \n".format(prime, L[number], L[other_number]))
 
+f.close()
