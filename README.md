@@ -11,4 +11,6 @@ The values for a and b are either:
    ss = { n²p | n ∈ ℕ, p ∈ ℙ }.
 
 With this information, we have factorised the prime numbers and can write the factors using complex numbers containing our surds √p.
-For example, the program outputs 7 = 3 + 4, and from this we can then go on to say that 7 =(√3 + 2i)(√3 -2i). These factors will fall in an extension of the ring ℤ, such as ℤ [ i, √p ]. 
+For example, the program outputs 7 = 3 + 4, and from this we can then go on to say that 7 =(√3 + 2i)(√3 -2i). These factors will fall in an extension of the ring ℤ, such as ℤ [ i, √p ]. Therefore, we have found a way to divide all the prime numbers! So just input a range that will contain the largest current known prime, run the program, and then together we can...
+
+![dividealltheprimes](https://user-images.githubusercontent.com/45293474/134227262-defef373-797f-42f7-a774-8311b8964082.png)
