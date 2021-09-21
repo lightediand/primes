@@ -11,4 +11,4 @@ The values for a and b are either:
    ss = { n²p | n ∈ ℕ, p ∈ ℙ }.
 
 With this information, we have factorised the prime numbers and can write the factors using complex numbers containing our surds √p.
-For example, the program outputs 7 = 3 + 4, and from this we can then go on to say that 7 =(√3 + 2i)(√3 -2i). These factors will fall in an extension of the ring ℤ, such as ℤ [ i, √p ]. This program will be further developed to list the factors and specify the necessary ring in due course!
+For example, the program outputs 7 = 3 + 4, and from this we can then go on to say that 7 =(√3 + 2i)(√3 -2i). These factors will fall in an extension of the ring ℤ, such as ℤ [ i, √p ]. 
