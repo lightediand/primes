@@ -1,10 +1,9 @@
 # setting the range
-n = 10
 
-# defining the square
-square = [x*x for x in range(1,n)]
+n = 100
 
 # defining primes
+
 p = []
 
 for x in range(n):
@@ -15,7 +14,12 @@ for x in range(n):
         else:
             p.append(x)
 
+# defining squares
+
+square = [x*x for x in range(1,n)]
+
 # defining surd squares
+
 surd_square = []
 
 for prime in p:
@@ -23,7 +27,9 @@ for prime in p:
         surd_square.append(prime*x*x)
 
 # combining the squares and surd squares into one list
+
 L = square + surd_square
+L.sort()
 
 # writing the primes as the sum of squares and surd squares 
 
