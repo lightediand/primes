@@ -1,4 +1,4 @@
-This is a program that writes prime numbers under a given number n ∈ ℕ as the sum of two squares.
+Two squares is a program that writes prime numbers under a given number n ∈ ℕ as the sum of two squares.
 
 The program generates a list of p = a + b for each prime and creates a text file. Some primes may have more than one sum. 
 
