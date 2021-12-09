@@ -4,7 +4,7 @@ n = 100
 
 # defining primes
 
-p = []
+prime_list = []
 
 for x in range(n):
     if x>1:
@@ -12,7 +12,7 @@ for x in range(n):
             if (x % i) ==0:
                 break
         else:
-            p.append(x)
+            prime_list.append(x)
 
 # defining squares
 
@@ -22,23 +22,23 @@ square = [x*x for x in range(1,n)]
 
 surd_square = []
 
-for prime in p:
+for prime in prime_list:
     for x in range(1,n):
         surd_square.append(prime*x*x)
 
 # combining the squares and surd squares into one list
 
-L = square + surd_square
-L.sort()
+squares = square + surd_square
+squares.sort()
 
-# writing the primes as the sum of squares and surd squares 
+# writing the primes as the sum of two squares 
 
 f = open("primes.txt","w") 
 
-for prime in p:
-    for number in range (len(L)-1):
-        for other_number in range (number, len(L)):
-            if L[number] + L[other_number] == prime:
-                f.write("{} = {} + {} \n".format(prime, L[number], L[other_number]))
+for prime in prime_list:
+    for j in range (len(squares)-1):
+        for k in range (j, len(squares)):
+            if squares[j] + squares[k] == prime:
+                f.write("{} = {} + {} \n".format(prime, squares[j], squares[k]))
 
 f.close()
