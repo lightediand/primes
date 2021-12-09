@@ -1,10 +1,10 @@
 # setting the range
 
-n = 1000000
+n = 100
 
 # defining primes
 
-p = []
+prime_list = []
 
 for x in range(n):
     if x>1:
@@ -12,22 +12,19 @@ for x in range(n):
             if (x % i) ==0:
                 break
         else:
-            p.append(x)
+            prime_list.append(x)
 
 # defining squares
 
 square = [x*x for x in range(1,n)]
 
-L = square
-L.sort()
-
 # writing the primes as the sum of one square plus one
 
 f = open("nearsquareprimes.txt","w") 
 
-for prime in p:
-    for number in range (len(L)-1):
-            if L[number] + 1 == prime:
-                f.write("{} = {} + {} \n".format(prime, L[number], 1))
+for prime in prime_list:
+    for j in range (len(square)-1):
+            if square[j] + 1 == prime:
+                f.write("{} = {} + {} \n".format(prime, square[j], 1))
 
 f.close()
