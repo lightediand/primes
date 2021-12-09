@@ -21,7 +21,7 @@ square = [x*x for x in range(1,n)]
 L = square
 L.sort()
 
-# writing the primes as the sum of squares and surd squares 
+# writing the primes as the sum of one square plus one
 
 f = open("nearsquareprimes.txt","w") 
 
