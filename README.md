@@ -9,3 +9,5 @@ The values for j and k are either:
    ss = { (n√p)² | n ∈ ℕ, p ∈ ℙ }, or equivalently, 
    
    ss = { n²p | n ∈ ℕ, p ∈ ℙ }.
+
+Difference is a similar program, but it instead writes a prime as the difference of two primes. It generates a list prime = k - j for each prime and creates a text file.
