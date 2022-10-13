@@ -3,16 +3,13 @@
 n = 100
 
 # defining primes
+# see comments on two squares for explanation
 
-prime_list = []
+prime_list = set(range(2,n))
 
-for x in range(n):
-    if x>1:
-        for i in range(2, x):
-            if (x % i) ==0:
-                break
-        else:
-            prime_list.append(x)
+for x in range(2,n):
+    for y in range(x,n):
+        primes.discard(x*y)
 
 # defining squares
 
