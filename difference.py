@@ -9,7 +9,7 @@ prime_list = set(range(2,n))
 
 for x in range(2,n):
     for y in range(x,n):
-        primes_list.discard(x*y)
+        prime_list.discard(x*y)
 
 f = open("difference.txt","w") 
 
