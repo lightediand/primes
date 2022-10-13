@@ -4,15 +4,16 @@ n = 100
 
 # defining primes
 
-prime_list = []
+# this works by generating a set of all the numbers 2 up to n
+# the loop finds all the products xy within this range
+# these are the composite numbers
+# which are then discarded from the set to leave only primes
 
-for x in range(n):
-    if x>1:
-        for i in range(2, x):
-            if (x % i) ==0:
-                break
-        else:
-            prime_list.append(x)
+prime_list = set(range(2,n))
+
+for x in range(2,n):
+    for y in range(x,n):
+        primes.discard(x*y)
 
 # defining squares
 
