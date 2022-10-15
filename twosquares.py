@@ -5,15 +5,24 @@ n = 100
 # defining primes
 
 # this works by generating a set of all the numbers 2 up to n
+
 # the loop finds all the products xy within this range
 # these are the composite numbers
-# which are then discarded from the set to leave only primes
+# it first checks if this number falls outside the range
+# it then checks if it has already been removed from the set
+# if the number is in the range and in the set
+# then it is discarded from the set
 
 prime_list = set(range(2,n))
 
 for x in range(2,n):
     for y in range(x,n):
-        prime_list.discard(x*y)
+        if x*y > n:
+            break
+        elif x*y not in prime_list:
+            break
+        else: prime_list.discard(x*y)
+        
 
 # defining squares
 
