@@ -19,18 +19,18 @@ for prime in prime_list:
 
 # combining the squares and surd squares into one list
 
-squares = square + surd_square
-squares.sort()
+squares_incl_surd_squares = square + surd_square
+squares_incl_surd_squares.sort()
 
 # writing the primes as the sum of two squares
 
 with open("primes.txt","w") as f:
 
     for prime in prime_list:
-        for j in range (len(squares)-1):
-            for k in range (j, len(squares)):
-                if squares[j] + squares[k] == prime:
-                    f.write("{} = {} + {} \n".format(prime, squares[j], squares[k
+        for j in range (len(squares_incl_surd_squares)-1):
+            for k in range (j, len(squares_incl_surd_squares)):
+                if squares_incl_surd_squares[j] + squares_incl_surd_squares[k] == prime:
+                    f.write("{} = {} + {} \n".format(prime, squares_incl_surd_squares[j], squares_incl_surd_squares[k]))
 
 
 with open("nearsquareprimes.txt","w") as f:
@@ -47,3 +47,11 @@ with open("difference.txt","w") as f:
             for k in range(j, len(prime_list)):
                 if prime_list[k] - prime_list[j] == prime:
                     f.write("{} = {} - {} \n".format(prime, prime_list[k], prime_list[j]))
+
+
+with open("twinprimes.txt","w") as f:
+
+    for prime in prime_list:
+            for j in range(len(prime_list)):
+                if prime_list[j] - 2 == prime:
+                    f.write("{} = {} - {} \n".format(prime, prime_list[j], 2))
