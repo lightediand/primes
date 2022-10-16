@@ -1,19 +1,8 @@
-#!/usr/bin/env python3
+from prime_sieve import prime_sieve
 
-def prime_sieve(n: int):
-    primes = [True for i in range(n+1)]
-    p = 2
-    while p*p <= n:
-        if (primes[p] == True):
-            for i in range(p*p, n+1, p):
-                primes[i] = False
-        p += 1
+# getting a prime list from our function
 
-    return [x for x, is_prime in enumerate(primes) if is_prime]
-
-
-
-n = 100
+n = 10
 prime_list = prime_sieve(n)
 
 # defining squares
@@ -35,12 +24,10 @@ squares.sort()
 
 # writing the primes as the sum of two squares
 
-f = open("primes.txt","w")
+with open("primes.txt","w") as f:
 
-for prime in prime_list:
-    for j in range (len(squares)-1):
-        for k in range (j, len(squares)):
-            if squares[j] + squares[k] == prime:
-                f.write("{} = {} + {} \n".format(prime, squares[j], squares[k]))
-
-f.close()
+    for prime in prime_list:
+        for j in range (len(squares)-1):
+            for k in range (j, len(squares)):
+                if squares[j] + squares[k] == prime:
+                    f.write("{} = {} + {} \n".format(prime, squares[j], squares[k]))
