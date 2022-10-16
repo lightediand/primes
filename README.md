@@ -1,15 +1,13 @@
-Two squares is a program that writes prime numbers under a given number n ∈ ℕ as the sum of two squares.
+Partitions is a program that partitions prime numbers under a given number n ∈ ℕ.
 
-The program generates a list of prime = j + k for each prime and creates a text file. Some primes may have more than one sum. 
+Currently, it generates three lists as a text file:
+1) primes as the sum of two squares or surd squares
+2) primes as the sum of a square and 1
+3) primes as the difference of two primes
+4) primes as the difference of a prime and 2
 
-The values for j and k are either:
-1) a square, s = { n² | n ∈ ℕ }
-2) a surd square, which is the square of a multiple of a surd, that is, 
+A surd square is the square of a multiple of a surd, that is, 
    
    ss = { (n√p)² | n ∈ ℕ, p ∈ ℙ }, or equivalently, 
    
    ss = { n²p | n ∈ ℕ, p ∈ ℙ }.
-
-One square is a restriction on the above program, designed to output only near square primes and their sum.
-
-Difference is a similar program, but it instead writes a prime as the difference of two primes. It generates a list prime = k - j for each prime and creates a text file.
