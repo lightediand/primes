@@ -1,8 +1,14 @@
 from prime_sieve import prime_sieve
 
+natural_number  = input("Please specify a natural number for the range: ") 
+
+# the above returns the input as a string
+# so we must convert it to an integer
+
+n = int(natural_number)
+
 # getting a prime list from our function
 
-n = 10
 prime_list = prime_sieve(n)
 
 # defining squares
@@ -54,4 +60,4 @@ with open("twinprimes.txt","w") as f:
     for prime in prime_list:
             for j in range(len(prime_list)):
                 if prime_list[j] - 2 == prime:
-                    f.write("{} = {} - {} \n".format(prime, prime_list[j], 2))
+                    f.write("{} = {} - {} \n".format(prime_list[j], prime, 2))
