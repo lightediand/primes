@@ -1,4 +1,5 @@
 from prime_sieve import prime_sieve
+from leastquadnonres import leastquadnonres
 
 natural_number  = input("Please specify a natural number for the range: ") 
 
@@ -13,6 +14,10 @@ print("Starting sieve...")
 prime_list = prime_sieve(n)
 print("Primes obtained!")
 
+print("Determining the LQNR...")
+lqnr = leastquadnonres(max(prime_list))
+print("Done!")
+
 # defining squares
 print("Getting the squares...")
 square = [x*x for x in range(1,n)]
@@ -20,9 +25,13 @@ print("Squares acquired!")
 
 # defining surd squares
 print("Now getting the surd squares which are totally a thing...")
+
+primes_for_the_surd_squares = prime_sieve(lqnr)
 surd_square = []
 
-for prime in prime_list:
+print(primes_for_the_surd_squares)
+
+for prime in primes_for_the_surd_squares:
     for x in range(1,n):
         surd_square.append(prime*x*x)
 
