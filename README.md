@@ -10,3 +10,5 @@ A surd square is the square of a multiple of a surd, that is,
    ss = { (n√p)² | n ∈ ℕ, p ∈ ℙ }, or equivalently, 
    
    ss = { n²p | n ∈ ℕ, p ∈ ℙ }.
+
+Now updated to reduce the number of primes needed for surd squares by determining least quadratic residues.
