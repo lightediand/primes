@@ -29,8 +29,6 @@ print("Now getting the surd squares which are totally a thing...")
 primes_for_the_surd_squares = prime_sieve(lqnr)
 surd_square = []
 
-print(primes_for_the_surd_squares)
-
 for prime in primes_for_the_surd_squares:
     for x in range(1,n):
         surd_square.append(prime*x*x)
