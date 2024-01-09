@@ -1,4 +1,6 @@
-Partitions is a program that partitions prime numbers under a given number n ∈ ℕ.
+**Perfectly Perplexing Prime Partitioner**
+
+Perfectly Perplexing Prime Partitioner is a program that partitions prime numbers under a given number n ∈ ℕ.
 
 Currently, it generates three lists as a text file:
 1) primes as the sum of two squares or surd squares
