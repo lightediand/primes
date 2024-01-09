@@ -1,4 +1,4 @@
-**Perfectly Perplexing Prime Partitioner**
+# Perfectly Perplexing Prime Partitioner!
 
 Perfectly Perplexing Prime Partitioner is a program that partitions prime numbers under a given number n ∈ ℕ.
 
